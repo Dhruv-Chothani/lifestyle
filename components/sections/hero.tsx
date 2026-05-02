@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-screen sm:h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full flex-1 min-h-screen sm:h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Parallax */}
       <motion.div
         className="absolute inset-0 z-0"
