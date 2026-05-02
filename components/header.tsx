@@ -35,20 +35,20 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-1 sm:gap-2">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2"
+            className="flex items-center gap-1 sm:gap-2"
           >
-            <Leaf className="w-6 h-6 text-primary" />
-            <span className="text-2xl font-bold text-primary">NatureFuel</span>
+            <Leaf className="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
+            <span className="text-lg sm:text-2xl font-bold text-primary">NatureFuel</span>
           </motion.div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 md:gap-8">
           {navLinks.map((link) => (
             <motion.div
               key={link.href}
@@ -56,7 +56,7 @@ export function Header() {
             >
               <Link
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors"
+                className="text-sm text-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </Link>
@@ -65,9 +65,9 @@ export function Header() {
         </div>
 
         {/* CTA and Mobile Menu Button */}
-        <div className="flex items-center gap-4">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="hidden sm:block">
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm">
               Order Now
             </Button>
           </motion.div>
@@ -75,12 +75,12 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className="w-5 sm:w-6 h-5 sm:h-6 text-foreground" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="w-5 sm:w-6 h-5 sm:h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -92,19 +92,24 @@ export function Header() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white border-t border-border"
+          className="lg:hidden bg-white border-t border-border"
         >
-          <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+          <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col gap-2 sm:gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground hover:text-primary transition-colors py-2"
+                className="text-sm sm:text-base text-foreground hover:text-primary transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                Order Now
+              </Button>
+            </motion.div>
           </div>
         </motion.div>
       )}

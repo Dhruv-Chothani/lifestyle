@@ -63,8 +63,8 @@ export function Hero() {
           <Button
             asChild
             size="lg"
-            variant="outline"
-            className="border-white text-white hover:bg-white/10"
+            variant="ghost"
+            className="text-white hover:bg-white/10 hover:text-white"
           >
             <Link href="/diet-plans">Get Diet Plan</Link>
           </Button>

@@ -69,26 +69,26 @@ export default function AboutPage() {
         </section>
 
         {/* Story Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-12 sm:py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Text */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+              {/* Text Content */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-4xl font-bold text-foreground mb-6">
+                <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
                   Our Story
                 </h2>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                   NatureFuel was born from a passion for healthy living and a belief that nature provides everything we need to thrive. Founded in 2020, our journey began when our founder, Sarah Green, realized the impact of organic nutrition on personal wellness.
                 </p>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                   What started as a small farmers&apos; market stand has grown into a thriving business, serving thousands of health-conscious customers across the region. Every product is crafted with care, using only the finest organic ingredients sourced from local farmers.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   Today, we&apos;re committed to making healthy living accessible, affordable, and sustainable for everyone.
                 </p>
               </motion.div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="relative h-96 rounded-2xl overflow-hidden"
+                className="relative h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden"
               >
                 <Image
                   src="/images/about-hero.jpg"
@@ -113,22 +113,22 @@ export default function AboutPage() {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-muted to-background">
+        <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-muted to-background">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2 sm:mb-4">
                 Our Values
               </h2>
             </motion.div>
 
             <motion.div
-              className="grid md:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
@@ -151,13 +151,13 @@ export default function AboutPage() {
                 <motion.div
                   key={idx}
                   variants={itemVariants}
-                  className="bg-white p-8 rounded-2xl shadow-lg border border-border text-center"
+                  className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-border text-center"
                   whileHover={{ y: -8 }}
                 >
-                  <h3 className="text-xl font-bold text-foreground mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">
                     {value.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm sm:text-base text-muted-foreground">
                     {value.description}
                   </p>
                 </motion.div>
@@ -167,16 +167,16 @@ export default function AboutPage() {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-12 sm:py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
-              className="text-center mb-16"
+              className="text-center mb-12 sm:mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2 sm:mb-4">
                 Meet Our Team
               </h2>
             </motion.div>
